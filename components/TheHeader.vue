@@ -1,69 +1,36 @@
 <template>
-  <header>
-    <nav class="fixed w-full bg-white">
-      <div class="container m-auto px-6 md:px-12 lg:px-6">
-        <div class="flex flex-wrap items-center justify-between py-6 gap-6 md:py-4 md:gap-0">
-          <div class="w-full flex justify-between lg:w-auto">
-            <a href="#" aria-label="logo">
-              <!-- <img src="images/logo.svg" class="w-36" alt="tailus logo" width="144" height="48" /> -->
-              <h4 class="text-2xl font-semibold">दि इंडियन डिफेंस एकेडमी</h4>
-              <hr />
-              <small>खुर्दही बाजार, सुल्तानपुर रोड ,लखनऊ</small>
-            </a>
-
-            <button
-              aria-label="humburger"
-              id="hamburger"
-              class="relative w-10 h-10 -mr-2 lg:hidden"
-            >
-              <div
-                aria-hidden="true"
-                id="line"
-                class="inset-0 w-6 h-0.5 m-auto rounded bg-gray-500 transtion duration-300"
-              ></div>
-              <div
-                aria-hidden="true"
-                id="line2"
-                class="inset-0 w-6 h-0.5 mt-2 m-auto rounded bg-gray-500 transtion duration-300"
-              ></div>
-              <div
-                aria-hidden="true"
-                id="line3"
-                class="inset-0 w-6 h-0.5 mt-2 m-auto rounded bg-gray-500 transtion duration-300"
-              ></div>
-            </button>
-          </div>
-
-          <div
-            hidden
-            class="w-full bg-white md:space-y-0 md:p-0 md:flex-nowrap md:bg-transparent lg:w-auto lg:flex"
-          >
-            <div class="block w-full lg:items-center lg:flex">
-              <ul
-                class="space-y-6 pb-6 tracking-wide font-medium text-gray-600 lg:pb-0 lg:pr-6 lg:items-center lg:flex lg:space-y-0"
-              >
-                <li>
-                  <a href="#" class="block md:px-3">
-                    <span>Facilities</span>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="block md:px-3">
-                    <span>Batches</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block md:px-3">
-                    <span>Contact Us</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <nav>
+    <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+      <a href="#" aria-label="logo">
+        <!-- <img src="images/logo.svg" class="w-36" alt="tailus logo" width="144" height="48" /> -->
+        <h4 class="text-2xl font-semibold">दि इंडियन डिफेंस एकेडमी</h4>
+        <hr />
+        <small>खुर्दही बाजार, सुल्तानपुर रोड ,लखनऊ</small>
+      </a>
+      <div class="block lg:hidden">
+        <button
+          class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none"
+        >
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
       </div>
-    </nav>
-  </header>
+      <div class="hidden lg:block">
+        <ul class="inline-flex">
+          <li>
+            <a class="px-4 font-bold" href="/">Home</a>
+          </li>
+          <li>
+            <a class="px-4 hover:text-gray-800" href="#">About</a>
+          </li>
+          <li>
+            <a class="px-4 hover:text-gray-800" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </template>
 
