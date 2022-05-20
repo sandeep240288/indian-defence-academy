@@ -21,13 +21,13 @@
           >Our Smart Health Monitoring Wristwatch is able to capture you vitals while you exercise. You can create different category of exercises and can track your vitals on the go.</p>
         </div>
         <div class="w-full md:w-1/2">
-          <img src="assets/health.svg" alt="Monitoring" />
+          <!-- <img src="assets/health.svg" alt="Monitoring" /> -->
         </div>
       </div>
 
       <div class="flex items-center flex-wrap mb-20">
         <div class="w-full md:w-1/2">
-          <img src="assets/report.svg" alt="Reporting" />
+          <!-- <img src="assets/report.svg" alt="Reporting" /> -->
         </div>
         <div class="w-full md:w-1/2 pl-10">
           <h4 class="text-3xl text-gray-800 font-bold mb-3">Reporting</h4>
@@ -45,7 +45,7 @@
           >Our Smart Health Monitoring Wristwatch allows you to sync data across all your mobile devices whether iOS, Android or Windows OS and also to your laptop whether MacOS, GNU/Linux or Windows OS.</p>
         </div>
         <div class="w-full md:w-1/2">
-          <img src="assets/sync.svg" alt="Syncing" />
+          <!-- <img src="assets/sync.svg" alt="Syncing" /> -->
         </div>
       </div>
     </section>
