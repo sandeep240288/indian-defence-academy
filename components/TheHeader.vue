@@ -1,12 +1,11 @@
 <template>
   <nav>
     <div class="container mx-auto px-6 py-2 flex justify-between items-center">
-      <a href="#" aria-label="logo">
+      <NuxtLink to="/" aria-label="logo" class="h-12">
         <!-- <img src="images/logo.svg" class="w-36" alt="tailus logo" width="144" height="48" /> -->
         <h4 class="text-2xl font-semibold">दि इंडियन डिफेंस एकेडमी</h4>
         <hr />
-        <small>खुर्दही बाजार, सुल्तानपुर रोड ,लखनऊ</small>
-      </a>
+      </NuxtLink>
       <div class="block lg:hidden">
         <button
           class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none"
@@ -20,13 +19,16 @@
       <div class="hidden lg:block">
         <ul class="inline-flex">
           <li>
-            <a class="px-4 font-bold" href="/">Home</a>
+            <NuxtLink to="/" class="px-4 hover:text-gray-800">Home</NuxtLink>
           </li>
           <li>
-            <a class="px-4 hover:text-gray-800" href="#">About</a>
+            <NuxtLink to="/batches" class="px-4 hover:text-gray-800">Batches</NuxtLink>
           </li>
+          <!-- <li>
+            <NuxtLink to="/facilities" class="px-4 hover:text-gray-800">Facilities</NuxtLink>
+          </li>-->
           <li>
-            <a class="px-4 hover:text-gray-800" href="#">Contact</a>
+            <NuxtLink to="/contact" class="px-4 hover:text-gray-800">Contact Us</NuxtLink>
           </li>
         </ul>
       </div>
