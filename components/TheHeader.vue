@@ -1,10 +1,12 @@
 <template>
-  <nav>
-    <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+  <nav class="mb-9">
+    <div class="container mx-auto flex justify-between items-center">
       <NuxtLink to="/" aria-label="logo" class="h-12">
-        <!-- <img src="images/logo.svg" class="w-36" alt="tailus logo" width="144" height="48" /> -->
-        <h4 class="text-2xl font-semibold">दि इंडियन डिफेंस एकेडमी</h4>
-        <hr />
+        <div class="flex justify-start items-center">
+          <img src="~/assets/image/logo.png" class="h-20" alt="brand logo" />
+          <!-- <h4 class="text-2xl font-semibold">दि इंडियन डिफेंस एकेडमी</h4> -->
+          <h4 class="text-2xl font-semibold">The Indian Defence Academy</h4>
+        </div>
       </NuxtLink>
       <div class="block lg:hidden">
         <button
