@@ -36,12 +36,10 @@
         </div>
       </div>
       <div class="flex items-center flex-wrap mb-20">
+        <div class="w-full md:w-1/2"></div>
         <div class="w-full md:w-1/2">
           <h4 class="text-3xl text-gray-800 font-bold mb-3">Hostel Facility</h4>
           <p class="text-gray-600 mb-8">Physical training by former Indian army PT coach</p>
-        </div>
-        <div class="w-full md:w-1/2">
-          <!-- <img src="assets/sync.svg" alt="Syncing" /> -->
         </div>
       </div>
     </section>
