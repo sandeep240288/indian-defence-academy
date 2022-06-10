@@ -1,10 +1,15 @@
 import axios from 'axios'
 const API_ENDPOINT = 'https://cat-fact.herokuapp.com/facts';
 exports.handler = async (event, context) => {
-    let data =[];
-    axios.get(API_ENDPOINT)
-    .then(function (response) {
-       data = response.data;
+    let data1 =[];
+    axios.get(API_ENDPOINT,{
+        headers: {
+                "Accept": "application/json",
+        }
+    }).then(function (response) {
+       data1 = response.data;
+       console.log(data1);
+
     })
     .catch(function (error) {
         return {
@@ -12,5 +17,5 @@ exports.handler = async (event, context) => {
             body: `Error: ${error}`
         }
     });
-    return data;
+    return data1;
 }
