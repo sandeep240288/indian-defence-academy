@@ -5,19 +5,14 @@ import axios from 'axios'
 
 const API_ENDPOINT = 'https://cat-fact.herokuapp.com/facts';
 exports.handler = async (event, context) => {
-  try {
-    let options = {
-        headers: {
-            "Accept": "application/json",
+    const result = axios.get(API_ENDPOINT)
+    .then(function (response) {
+        return JSON.stringify(response.data)
+    })
+    .catch(function (error) {
+        return {
+        statusCode: 422,
+        body: `Error: ${error}`
         }
-    };
-    const response = await axios.get(API_ENDPOINT,{},options);
-    return response;
-  } catch (error) {
-    console.log(error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Failed fetching data' }),
-    };
-  }
+   });
 }
