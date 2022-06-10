@@ -12,12 +12,9 @@ const options ={
 console.log('Outside Handler');
 exports.handler = async (event, context) => {
     console.log('Inside handler');
-    return axios.get(API_ENDPOINT,options).then(function (response) {
-     
-       console.log('inside axios');
-
+    return axios.get('/api/articles',options).then(function (response) {
+        console.log('inside axios');
         return { statusCode: 200, body: JSON.stringify(response.data) };
-
     })
     .catch(function (error) {
         return {
@@ -25,5 +22,4 @@ exports.handler = async (event, context) => {
             body: `Error: ${error}`
         }
     });
-    
 }
