@@ -3,13 +3,9 @@ const API_ENDPOINT = 'https://cat-fact.herokuapp.com/facts';
 
 console.log('Outside Handler');
 exports.handler = async (event, context) => {
-    let data1 =[];
-    console.log(API_ENDPOINT);
-    axios.get(API_ENDPOINT,{
-        headers: {
-                "Accept": "application/json",
-        }
-    }).then(function (response) {
+    // let data1 =[];
+    console.log('Inside handler');
+    return axios.get(API_ENDPOINT).then(function (response) {
      
        console.log('inside axios');
 
@@ -22,5 +18,5 @@ exports.handler = async (event, context) => {
             body: `Error: ${error}`
         }
     });
-    return data1;
+    
 }
