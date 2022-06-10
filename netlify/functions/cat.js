@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+const API_ENDPOINT = 'https://cat-fact.herokuapp.com/facts';
 exports.handler = async (event, context) => {
     let data =[];
     axios.get(API_ENDPOINT)
