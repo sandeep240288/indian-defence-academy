@@ -12,8 +12,7 @@ exports.handler = async (event, context) => {
         }
     };
     const response = await axios.get(API_ENDPOINT,{},options);
-    const data = await response.json();
-    return data;
+    return response;
   } catch (error) {
     console.log(error);
     return {
