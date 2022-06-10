@@ -1,3 +1,7 @@
+// const nodeFetch = require('node-fetch') as typeof fetch;
+
+const fetch = require("node-fetch");
+
 const API_ENDPOINT = 'https://cat-fact.herokuapp.com/facts';
 exports.handler = async (event, context) => {
   try {
