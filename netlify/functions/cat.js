@@ -1,6 +1,7 @@
 // const nodeFetch = require('node-fetch') as typeof fetch;
 
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
+import axios from 'axios'
 
 const API_ENDPOINT = 'https://cat-fact.herokuapp.com/facts';
 exports.handler = async (event, context) => {
@@ -10,7 +11,7 @@ exports.handler = async (event, context) => {
             "Accept": "application/json",
         }
     };
-    const response = await fetch(API_ENDPOINT);
+    const response = await axios.get(API_ENDPOINT,{},options);
     const data = await response.json();
     return data;
   } catch (error) {
