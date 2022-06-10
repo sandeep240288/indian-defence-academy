@@ -24,8 +24,8 @@ let cats = ref([])
 
 async function catsData(){
     const response = await fetch(`/.netlify/functions/cat`)
-    console.log(response);
-    cats.value = response
+    const data = await response.json();
+    cats.value = data
     console.log(cats.value);
 
     // const API_ENDPOINT = 'https://cat-fact.herokuapp.com/facts';
