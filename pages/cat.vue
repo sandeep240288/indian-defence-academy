@@ -23,8 +23,10 @@ import { ref, onMounted } from 'vue'
 let cats = ref([])
 
 async function catsData(){
-  const response = await fetch(`/.netlifly/functions/cat`)
-  cats.value = response
+    const response = await fetch(`/.netlify/functions/cat`)
+    console.log(response);
+    cats.value = response
+    console.log(cats.value);
 
     // const API_ENDPOINT = 'https://cat-fact.herokuapp.com/facts';
 
