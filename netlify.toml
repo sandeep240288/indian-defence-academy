@@ -1,0 +1,16 @@
+[dev]                                          
+   framework = "#custom"                                                    
+   command = "npm run dev"             
+   targetPort = 3000
+   debug = true
+   port = 8888
+   publish = "dist"
+   functions = "netlify/functions"
+[build]                                          
+   framework = "#custom"                                                    
+   command = "npm run build"             
+   targetPort = 3000
+   debug = true
+   port = 8888
+   publish = "dist"
+   functions = "netlify/functions"

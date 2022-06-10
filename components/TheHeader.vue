@@ -35,6 +35,9 @@
           <NuxtLink to="batches">Batches</NuxtLink>
         </li>
         <li class="hover:text-red-400">
+          <NuxtLink to="articles">Articles</NuxtLink>
+        </li>
+        <li class="hover:text-red-400">
           <NuxtLink to="/contact">Contact Us</NuxtLink>
         </li>
       </ul>

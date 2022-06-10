@@ -1,13 +1,13 @@
 <template>
   <div class="h-screen px-10 py-4">
-    <h3 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Latest Articles</h3>
-    <div class="grid grid-cols-3 gap-4">
-      <div  v-for="article in articles" :key="article.id">
+    <h3 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Latest Articles Today </h3>
+    <div class="grid md:grid-cols-3 sm:grid-cols-1  gap-4">
+      <div v-for="article in articles" :key="article.id">
         <div
           class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
           <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-             {{ article.title }}
+              {{ article.title }}
             </h5>
           </a>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
@@ -30,10 +30,23 @@
 </template>
 
 <script setup>
-const { pending, data: articles } = useLazyFetch('https://whispering-stream-89457.herokuapp.com/api/articles')
-watch(articles, (articles) => {
-  // Because posts starts out null, you won't have access
+  // const options ={ 
+  //   baseURL: "https://whispering-stream-89457.herokuapp.com" ,
+  //   headers:{ 
+  //   token:'ZRfWX6ScXAb69l36Fre7sTNm4FHhZaq5mJX010vP',
+  //     "Accept": "application/json",
+  //   } 
+  // };
+
+
+const { data: articles, refresh } = useLazyAsyncData('articles', () => $fetch(`/.netlify/functions/articles`))
+/
+watch(articles, (newArticles) => {
+  // Because count starts out null, you won't have access
   // to its contents immediately, but you can watch it.
+  console.log(newArticles);
+  console.log('I am inside articles vue  watch function');
 })
+
 
 </script>
