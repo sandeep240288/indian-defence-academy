@@ -22,13 +22,20 @@
 import { ref, onMounted } from 'vue'
 let cats = ref([])
 
-function catsData(){
-   fetch(`/.netlifly/functions/cat`)
-   .then(response => response.json())
-   .then(data => {
-       console.log(data);
-       cats.value = data
-    })
+async function catsData(){
+  const response = await fetch(`/.netlifly/functions/cat`)
+  cats.value = response
+
+    // const API_ENDPOINT = 'https://cat-fact.herokuapp.com/facts';
+
+    // let options = {
+    //     headers: {
+    //         "Accept": "application/json",
+    //     }
+    // };
+    // const response = await fetch(API_ENDPOINT, options);
+    // const data = await response.json();
+    // cats.value =data; 
 }
 // }
 onMounted(() => {
