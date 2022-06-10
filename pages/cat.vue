@@ -18,23 +18,20 @@
 </template>
 
 <script setup>
-// const options ={ 
-//   baseURL: "https://whispering-stream-89457.herokuapp.com" ,
-//   headers:{ 
-//   token:'ZRfWX6ScXAb69l36Fre7sTNm4FHhZaq5mJX010vP',
-//     "Accept": "application/json",
-//   } 
-// };
 
+import { ref, onMounted } from 'vue'
+let cats = ref([])
 
-const { data: cats, refresh } = useLazyAsyncData('cats', () => $fetch(`/.netlify/functions/cat`))
-    
-watch(cats, (x) => {
-    // Because count starts out null, you won't have access
-    // to its contents immediately, but you can watch it.
-    console.log(x);
-    console.log('I am inside articles vue  watch function');
+function catsData(){
+   fetch(`/.netlifly/functions/cat`)
+   .then(response => response.json())
+   .then(data => {
+       console.log(data);
+       cats.value = data
+    })
+}
+// }
+onMounted(() => {
+    catsData()
 })
-
-
 </script>
