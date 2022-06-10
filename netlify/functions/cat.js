@@ -10,9 +10,10 @@ exports.handler = async (event, context) => {
                 "Accept": "application/json",
         }
     }).then(function (response) {
-       data1 = JSON.stringify(response.data);
-       console.log(data1);
+     
        console.log('inside axios');
+
+        return { statusCode: 200, body: JSON.stringify(response.data) };
 
     })
     .catch(function (error) {
