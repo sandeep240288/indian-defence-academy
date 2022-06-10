@@ -39,14 +39,16 @@
   // };
 
 
-const { data: articles, refresh } = useLazyAsyncData('articles', () => $fetch(`/.netlify/functions/articles`))
-/
-watch(articles, (newArticles) => {
-  // Because count starts out null, you won't have access
-  // to its contents immediately, but you can watch it.
-  console.log(newArticles);
-  console.log('I am inside articles vue  watch function');
+import { ref, onMounted } from 'vue'
+let articles = ref([])
+async function catsData() {
+  const response = await fetch(`/.netlify/functions/articles`)
+  const data = await response.json();
+  articles.value = data
+}
+// }
+onMounted(() => {
+  catsData()
 })
-
 
 </script>
