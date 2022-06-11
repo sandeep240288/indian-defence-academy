@@ -7,7 +7,6 @@ const options ={
   } 
 };
 
-console.log('Outside Handler');
 exports.handler = async (event, context) => {
     return axios.get('/api/articles',options).then(function (response) {
         return { statusCode: 200, body: JSON.stringify(response.data) };
