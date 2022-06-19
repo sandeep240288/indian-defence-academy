@@ -15,6 +15,13 @@
                     <span itemprop="telephone"><a href="tel:+916307658884">
                             +916307658884</a></span>
                 </div>
+                <div>
+                    <span itemprop="telephone">
+                        <a href="https://wa.me/918604719945">
+                            <img src="assets/image/whatsapp_logo.jpg" alt="" >
+                        </a>
+                    </span>
+                </div>
             </div>
 
 
