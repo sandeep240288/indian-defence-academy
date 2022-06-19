@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white shadow-md mb-4 w-full backdrop-blur absolute sticky top-0 z-40">
+  <div class="bg-white shadow-md mb-4 w-full backdrop-blur">
     <nav class="container pl-2 pr-6 py-2 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
         <NuxtLink to="/" aria-label="logo">
