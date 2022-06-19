@@ -17,7 +17,7 @@
                 </div>
                 <div>
                     <span itemprop="telephone">
-                        <a href="https://wa.me/918604719945">
+                        <a href="https://wa.me/918604719945" target="_blank">
                             <img src="assets/image/whatsapp_logo.jpg" alt="" height="20" width="20">
                         </a>
                     </span>
