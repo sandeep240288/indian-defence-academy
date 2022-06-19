@@ -1,7 +1,7 @@
 <template>
   <div class="z-30">
-    <div class="py-10 " style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%)">
-      <Slider />
+    <div class="h-1/3 md:px-20 sm:px-10" style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%)">
+      <Slide />
     </div>
     <section class="container mx-auto px-6 p-10">
       <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Facilities Available</h2>

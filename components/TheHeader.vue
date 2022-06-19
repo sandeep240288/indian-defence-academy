@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-white shadow-md mb-4 w-full backdrop-blur">
-    <nav class="container pl-2 pr-6 py-2 mx-auto md:flex md:justify-between md:items-center">
+  <div class="bg-white shadow-md mb-2 w-full backdrop-blur">
+    <nav class="container pl-2 pr-6 py-1 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
         <NuxtLink to="/" aria-label="logo">
           <div class="flex justify-start items-center">

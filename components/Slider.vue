@@ -1,5 +1,5 @@
 <template>
-  <div id="controls-carousel" class="relative" data-carousel="static">
+  <div>
     <div
       class="overflow-hidden relative h-36 sm:h-60 xl:h-72 2xl:h-80 flex justify-center items-center"
     >

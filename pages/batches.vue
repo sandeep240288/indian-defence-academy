@@ -1,6 +1,6 @@
 <template>
-  <div class="h-screen">
-    Page is Coming soon
+  <div class="px-10 py-0 h-1/2">
+    This page is under construction
   </div>
 </template>
 
