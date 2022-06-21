@@ -8,7 +8,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
     <template #slides>
       <Slide v-for="(slide, index) in 5" :key="index">
         <div v-if="slide<5" class="carousel__item">
-          <img :src="`assets/image/slides1/${slide}.jpg`" alt loading="lazy" />
+          <img :src="`../assets/image/slides1/${slide}.jpg`" alt loading="lazy" />
         </div>
         <div v-if="slide==5">
           <Slider></Slider>
