@@ -10,9 +10,9 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
         <div v-if="slide<5" class="carousel__item">
           <img :src="`assets/image/slides1/${slide}.jpg`" alt loading="lazy" />
         </div>
-        <!-- <div v-if="slide==5">
+        <div v-if="slide==5">
           <Slider></Slider>
-        </div>-->
+        </div>
       </Slide>
     </template>
     <template #addons>
