@@ -5,6 +5,7 @@ export default defineNuxtConfig({
       shim: false,
    },
    css: ["~/assets/css/tailwind.css"],
+  
    build: {
       postcss: {
          postcssOptions: {

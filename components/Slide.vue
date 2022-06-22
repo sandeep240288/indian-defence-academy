@@ -3,14 +3,16 @@ import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import { reactive, computed } from "vue";
 
-// const Imagesrc1 = (slide) => {
+import img1 from "@/assets/image/slides1/1.jpg";
+import img2 from "@/assets/image/slides1/2.jpg";
+import img3 from "@/assets/image/slides1/3.jpg";
+import img4 from "@/assets/image/slides1/4.jpg";
 
-//   return "~/assets/image/slides1/" + slide + ".jpg";
-// };
-
-const Imagesrc = (slide) => {
-  return "../assets/image/slides1/" + slide + ".jpg";
-};
+function getImageUrl(slide) {
+  let images = [img1, img2, img3, img4];
+  return images[slide - 1];
+  // return x;
+}
 </script>
 
 <template>
@@ -18,7 +20,7 @@ const Imagesrc = (slide) => {
     <template #slides>
       <Slide v-for="(slide, index) in 5" :key="index">
         <div v-if="slide<5" class="carousel__item">
-          <img :src="Imagesrc(slide)" loading="lazy" />
+          <img :src="getImageUrl(slide)" loading="lazy" />
         </div>
         <div v-if="slide==5">
           <Slider></Slider>
