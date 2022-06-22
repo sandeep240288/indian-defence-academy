@@ -1,6 +1,16 @@
 <script setup>
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import { reactive, computed } from "vue";
+
+// const Imagesrc1 = (slide) => {
+
+//   return "~/assets/image/slides1/" + slide + ".jpg";
+// };
+
+const Imagesrc = (slide) => {
+  return "../assets/image/slides1/" + slide + ".jpg";
+};
 </script>
 
 <template>
@@ -8,7 +18,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
     <template #slides>
       <Slide v-for="(slide, index) in 5" :key="index">
         <div v-if="slide<5" class="carousel__item">
-          <img :src="`~/assets/image/slides1/${slide}.jpg`" alt loading="lazy" />
+          <img :src="Imagesrc(slide)" loading="lazy" />
         </div>
         <div v-if="slide==5">
           <Slider></Slider>
@@ -21,6 +31,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
     </template>
   </Carousel>
 </template>
+
 <style scoped>
 .carousel__slide > .carousel__item {
   transform: scale(1);
