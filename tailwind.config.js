@@ -1,19 +1,29 @@
-// tailwind.config.js
-module.exports = {
-  mode: "jit",
-  content: [
-    "./components/**/*.{vue,js}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    // "./nuxt.config.{js,ts}",
-  ],
+const colors = require("tailwindcss/colors");
 
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
+module.exports = {
+	content: [
+		"./components/**/*.{js,vue,ts}",
+		"./layouts/**/*.vue",
+		"./pages/**/*.vue",
+		"./plugins/**/*.{js,ts}",
+		// "./nuxt.config.{js,ts}",
+		"./content/**/*.{md,yml,json,yaml,toml,csv}",
+		"./app.vue",
+	],
+	darkMode: "class",
+	theme: {
+		extend: {
+			colors: {
+				primary: {
+					DEFAULT: colors.violet[700],
+					...colors.violet,
+				},
+			},
+			fontFamily: {
+				sans: ["Inter"],
+			},
+		},
+	},
+	plugins: [require("@tailwindcss/typography")],
 };
+ 
