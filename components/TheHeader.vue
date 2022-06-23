@@ -34,12 +34,12 @@
         <li class="hover:text-red-400">
           <NuxtLink to="/batches">Batches</NuxtLink>
         </li>
-        <li class="hover:text-red-400">
+        <!-- <li class="hover:text-red-400">
           <NuxtLink to="/articles">Articles</NuxtLink>
         </li>
         <li class="hover:text-red-400">
           <NuxtLink to="/md-articles">blogs</NuxtLink>
-        </li>
+        </li>-->
         <li class="hover:text-red-400">
           <NuxtLink to="/contact">Contact Us</NuxtLink>
         </li>
