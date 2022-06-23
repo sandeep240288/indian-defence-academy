@@ -38,6 +38,9 @@
           <NuxtLink to="/articles">Articles</NuxtLink>
         </li>
         <li class="hover:text-red-400">
+          <NuxtLink to="/md-articles">blogs</NuxtLink>
+        </li>
+        <li class="hover:text-red-400">
           <NuxtLink to="/contact">Contact Us</NuxtLink>
         </li>
       </ul>
