@@ -136,20 +136,22 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import axios from "axios";
 let submitData = ref([]);
 
 const form = ref({});
 
 async function submitForm() {
-  const response = await fetch(`/.netlify/functions/contactus`, {
+  const response = await axios.get(`/.netlify/functions/contactus`, {
     method: "post",
     body: data,
   });
   const data = await response.json();
   submitData.value = data;
   console.log("function called");
-  console.log(submitData);
+  // console.log(submitData);
   console.log(form);
+  console.log(response);
 }
 </script>
 

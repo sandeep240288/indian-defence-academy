@@ -8,20 +8,14 @@ const options ={
 };
 
 exports.handler = async (event, context) => {
-    // let data = await parseMultipartForm(event)
-    // return axios.post('/api/contactus',data,options).then(function (response) {
+    const x = event.body;
+    // return axios.post('/api/contactus',x,options).then(function (response) {
     //     return { statusCode: 200, body: JSON.stringify(response.data) };
-    // }
-    
-    // )
-    // .catch(function (error) {
+    // }).catch(function (error) {
     //     return {
     //         statusCode: 422,
     //         body: `Error: ${error}`
     //     }
-    // });\
-
-
-     const data = event.body
-     return data
+    // });
+    return x
 }
