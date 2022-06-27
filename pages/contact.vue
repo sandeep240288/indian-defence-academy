@@ -83,16 +83,18 @@
         </div>
         <div class="w-full lg:w-1/2 xl:w-5/12 px-4">
           <div class="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
-            <form type="post" @submit.prevent="submitForm()">
+            <form method="post" autocomplete="on" @submit.prevent="submitForm()">
               <div class="mb-6">
                 <input
                   type="text"
+                  v-model="form.name"
                   placeholder="Your Name"
                   class="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
                 />
               </div>
               <div class="mb-6">
                 <input
+                  v-model="form.email"
                   type="email"
                   placeholder="Your Email"
                   class="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
@@ -100,6 +102,7 @@
               </div>
               <div class="mb-6">
                 <input
+                  v-model="form.phone"
                   type="text"
                   placeholder="Your Phone"
                   class="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary"
@@ -107,6 +110,7 @@
               </div>
               <div class="mb-6">
                 <textarea
+                  v-model="form.message"
                   rows="6"
                   placeholder="Your Message"
                   class="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] resize-none outline-none focus-visible:shadow-none focus:border-primary"
@@ -133,11 +137,19 @@
 <script setup>
 import { ref, onMounted } from "vue";
 let submitData = ref([]);
+
+const form = ref({});
+
 async function submitForm() {
-  const response = await fetch(`/.netlify/functions/contactus`);
+  const response = await fetch(`/.netlify/functions/contactus`, {
+    method: "post",
+    body: data,
+  });
   const data = await response.json();
   submitData.value = data;
+  console.log("function called");
   console.log(submitData);
+  console.log(form);
 }
 </script>
 
