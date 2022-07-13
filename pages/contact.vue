@@ -142,9 +142,10 @@ let submitData = ref([]);
 const form = ref({});
 
 async function submitForm() {
-  const response = await axios.get(`/.netlify/functions/contactus`, {
-    method: "post",
-    body: data,
+
+  
+  const response = await axios.post(`/.netlify/functions/contactus`, {
+      body: data,
   });
   const data = await response.json();
   submitData.value = data;

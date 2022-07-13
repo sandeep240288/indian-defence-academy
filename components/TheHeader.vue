@@ -4,7 +4,7 @@
       <div class="flex items-center justify-between">
         <NuxtLink to="/" aria-label="logo">
           <div class="flex justify-start items-center">
-            <img src="~/assets/image/logo.png" class="h-20" alt="brand logo" />
+            <img src="~/assets/image/logo.jpeg" class="h-20" alt="brand logo" />
 
             <h4 class="text-2xl font-semibold">The Indian Defence Academy</h4>
           </div>
