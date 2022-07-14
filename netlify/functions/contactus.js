@@ -9,13 +9,13 @@ const options ={
 
 exports.handler = async (event, context) => {
     const x = event.body;
-    // return axios.post('/api/contactus',x,options).then(function (response) {
-    //     return { statusCode: 200, body: JSON.stringify(response.data) };
-    // }).catch(function (error) {
-    //     return {
-    //         statusCode: 422,
-    //         body: `Error: ${error}`
-    //     }
-    // });
+    return axios.post('/api/contactus',x,options).then(function (response) {
+        return { statusCode: 200, body: JSON.stringify(response.data) };
+    }).catch(function (error) {
+        return {
+            statusCode: 422,
+            body: `Error: ${error}`
+        }
+    });
     return x
 }
