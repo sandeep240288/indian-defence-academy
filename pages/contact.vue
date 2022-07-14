@@ -83,7 +83,7 @@
         </div>
         <div class="w-full lg:w-1/2 xl:w-5/12 px-4">
           <div class="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
-            <form method="post" autocomplete="on" @submit.prevent="submitForm()">
+            <form name="contactusform" method="post" autocomplete="on" @submit.prevent="submitForm()">
               <div class="mb-6">
                 <input
                   type="text"
