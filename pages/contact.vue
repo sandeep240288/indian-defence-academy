@@ -123,7 +123,7 @@ async function submitForm() {
 
   
   const response = await axios.post(`/.netlify/functions/contactus`, {
-      body: form,
+      body: form.value,
   });
   const data = await response.json();
   submitData.value = data;
