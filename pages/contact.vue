@@ -159,9 +159,10 @@ async function submitForm() {
       body: form.value,
     })
     .then((response) => {
-      submitData.value = response.data;
-      console.log("in Then function");
-      console.log(submitData.value);
+      console.log(response);
+      // submitData.value = JSON.parse(response.data);
+      // console.log("in Then function");
+      // console.log(submitData.value);
     })
     .catch((error) => {
       console.log(error.response.data);
